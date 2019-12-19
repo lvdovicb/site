@@ -41,5 +41,8 @@ li {
   font-family: "Alatsi", sans-serif;
   display: inline-block;
   margin-right: 30px;
+  a {
+    color: white;
+  }
 }
 </style>

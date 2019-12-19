@@ -20,15 +20,10 @@ module.exports = {
       }
     ],
     link: [{
-        rel: "icon",
-        type: "image/x-icon",
-        href: "/favicon.ico"
-      },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Alatsi&display=swap"
-      }
-    ]
+      rel: "icon",
+      type: "image/x-icon",
+      href: "/favicon.ico"
+    }]
   },
   /*
    ** Customize the progress-bar color
@@ -39,11 +34,11 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ["ant-design-vue/dist/antd.css"],
+  css: [],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["@/plugins/antd-ui"],
+  plugins: [],
   /*
    ** Nuxt.js dev-modules
    */

@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <div class="div0"></div>
     <div class="card div1" tabindex="0">
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit
@@ -8,7 +9,6 @@
         consequuntur adipisci?
       </p>
     </div>
-    <Switch></Switch>
     <div class="card div2" tabindex="0">
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit
@@ -112,7 +112,7 @@ export default {
   font-family: "Alatsi", sans-serif;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(auto-fit, 2fr);
   grid-template-rows: repeat(12, 100px);
   grid-column-gap: 2px;
   grid-row-gap: 10px;
@@ -125,7 +125,7 @@ export default {
   font-size: 1rem;
   z-index: 0;
 }
-//hover et focus ont un style different
+//hover et focus ont un style different, le scale ne marche pas au focus
 .card:hover {
   z-index: 1;
   transition: z-index 200ms ease-in-out;
@@ -134,6 +134,11 @@ export default {
   z-index: 1;
   outline: none;
   transform: scale(2.1);
+}
+.div0 {
+  grid-area: 1 / 4 / 13 / 10;
+  background-color: #e9e9e9;
+  z-index: 1;
 }
 .div1 {
   grid-area: 1 / 1 / 4 / 7;

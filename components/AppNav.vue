@@ -42,7 +42,8 @@ li {
   display: inline-block;
   margin-right: 30px;
   a {
-    color: white;
+    color: #eee;
+    text-decoration: none;
   }
 }
 </style>

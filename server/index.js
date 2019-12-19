@@ -1,5 +1,6 @@
 const express = require("express");
 const consola = require("consola");
+// eslint-disable-next-line prettier/prettier
 const {
   Nuxt,
   Builder
@@ -14,6 +15,7 @@ async function start() {
   // Init Nuxt.js
   const nuxt = new Nuxt(config);
 
+  // eslint-disable-next-line prettier/prettier
   const {
     host,
     port

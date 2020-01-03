@@ -84,40 +84,15 @@
 </template>
 
 <script>
-import { gsap } from "gsap";
-
-export default {
-  mounted() {
-    this.anim();
-  },
-  methods: {
-    anim() {
-      gsap.fromTo(
-        ".card",
-        { opacity: 0, x: -500 },
-        { opacity: 1, duration: 2, x: 100, ease: "Elastic.easeInout" }
-      );
-    }
-  }
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css?family=Alatsi&display=swap");
-
 .container {
-  margin: 0;
-  padding: 0;
-  font-family: "Alatsi", sans-serif;
-  border: 8px solid #ff5aa1;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 100px);
-  grid-column-gap: 2px;
-  grid-row-gap: 10px;
-  background-image: linear-gradient(#232946, #6ea1e4);
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
 }
 .card {
   border-radius: 10px;
@@ -125,7 +100,7 @@ export default {
   opacity: 0;
   font-size: 1rem;
   z-index: 0;
-  transition: all z-index 150ms ease-in-out;
+  transition: transform scale z-index 150ms ease-in-out;
 }
 //hover et focus ont un style different, le scale ne marche pas au focus
 .card:hover,
@@ -152,7 +127,7 @@ export default {
 
 .div3 {
   background-color: #eebbc3;
-  grid-area: 1 / 3 / 10 / 5;
+  grid-area: 1 / 3 / 9 / 5;
 }
 
 .div4 {

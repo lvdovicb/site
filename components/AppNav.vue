@@ -5,7 +5,7 @@
         <nuxt-link exact to="/">Home</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/projects">projects</nuxt-link>
+        <nuxt-link to="/projects">Projects</nuxt-link>
       </li>
       <li>
         <nuxt-link to="/more">more</nuxt-link>
@@ -29,8 +29,8 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 3rem;
+  max-width: 100vw;
+  height: 50px;
   font-size: 1.5rem;
   background-color: #35495e;
 }
@@ -41,9 +41,17 @@ li {
   font-family: "Alatsi", sans-serif;
   display: inline-block;
   margin-right: 30px;
+
   a {
     color: #eee;
     text-decoration: none;
   }
+}
+.nuxt-link-active {
+  border-bottom: 3px solid #ff5aa1;
+  border-top: 2px solid #ff5aa1;
+  text-decoration: none;
+  // text-decoration: overline underline 3px solid #ff5aa1;
+  // text-underline-position: under;
 }
 </style>
